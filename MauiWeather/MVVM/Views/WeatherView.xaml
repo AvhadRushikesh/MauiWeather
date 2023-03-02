@@ -22,7 +22,7 @@
                        SearchCommand="{Binding SearchCommand}"
                        SearchCommandParameter="{Binding Source={x:Reference searchBar}, Path=Text}" />
         </Grid>
-        <VerticalStackLayout Grid.Row="1" Style="{StaticResource MainStackLayout}">
+        <VerticalStackLayout Grid.Row="1" Style="{StaticResource MainStackLayout}" IsVisible="{Binding IsVisible}">
             <Label Text="{Binding PlaceName}" Style="{StaticResource Title}" />
             <Label Text="{Binding Date, StringFormat='{0:MMMM dd, yyyy}'}" />
         </VerticalStackLayout>
@@ -30,7 +30,7 @@
             Grid.Row="2"
             RepeatCount="-1"
             Source="{Binding WeatherData.current_weather.weathercode, Converter={StaticResource CodeToLottieConverter}}" />
-        <Grid Grid.Row="3" ColumnDefinitions="*,*,*">
+        <Grid Grid.Row="3" ColumnDefinitions="*,*,*" IsVisible="{Binding IsVisible}">
             <VerticalStackLayout HorizontalOptions="Center" Spacing="10">
                 <Label Text="Temp" Style="{StaticResource WeatherTitle}"/>
                 <Label Text="{Binding WeatherData.current_weather.temperature, StringFormat='{0}°C'}" Style="{StaticResource WeatherValue}"/>

@@ -19,6 +19,8 @@ namespace MauiWeather.MVVM.ViewModels
         public string PlaceName { get; set; }
         public DateTime Date { get; set; } = DateTime.Now;
 
+        public bool IsVisible { get; set; }
+
         private HttpClient client;
 
         public WeatherViewModel()
@@ -65,6 +67,7 @@ namespace MauiWeather.MVVM.ViewModels
                         };
                         WeatherData.daily2.Add(daily2);
                     }
+                    IsVisible = true;
                 }
             }
         }
