@@ -9,6 +9,7 @@
 
     <ContentPage.Resources>
         <converter:CodeToWeatherConverter x:Key="CodeToWeatherConverter" />
+        <converter:CodeToLottieConverter x:Key="CodeToLottieConverter" />
     </ContentPage.Resources>
     
     
@@ -28,7 +29,7 @@
         <skia:SKLottieView
             Grid.Row="2"
             RepeatCount="-1"
-            Source="storm.json" />
+            Source="{Binding WeatherData.current_weather.weathercode, Converter={StaticResource CodeToLottieConverter}}" />
         <Grid Grid.Row="3" ColumnDefinitions="*,*,*">
             <VerticalStackLayout HorizontalOptions="Center" Spacing="10">
                 <Label Text="Temp" Style="{StaticResource WeatherTitle}"/>
