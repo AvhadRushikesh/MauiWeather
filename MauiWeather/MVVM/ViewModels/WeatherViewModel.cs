@@ -20,6 +20,7 @@ namespace MauiWeather.MVVM.ViewModels
         public DateTime Date { get; set; } = DateTime.Now;
 
         public bool IsVisible { get; set; }
+        public bool IsLoading { get; set; }
 
         private HttpClient client;
 
@@ -44,6 +45,8 @@ namespace MauiWeather.MVVM.ViewModels
         {
             var url =
                  $"https://api.open-meteo.com/v1/forecast?latitude={location.Latitude}&longitude={location.Longitude}&daily=weathercode,temperature_2m_max,temperature_2m_min&current_weather=true&timezone=America%2FChicago";
+
+            IsLoading = true;
 
             var response =
               await client.GetAsync(url);
@@ -70,6 +73,7 @@ namespace MauiWeather.MVVM.ViewModels
                     IsVisible = true;
                 }
             }
+            IsLoading = false;
         }
 
 
