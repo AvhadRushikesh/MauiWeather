@@ -11,7 +11,8 @@ namespace MauiWeather.Converter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            var code = (float)value;
+            //var code = (float)value;
+            var code = value;
 
             switch (code)
             {
@@ -26,43 +27,43 @@ namespace MauiWeather.Converter
                 case 3:
                     return "Overcast";
 
-                case 45:
+                case 4:
                     return "Fog";
 
-                case 48:
+                case 5:
                     return "Depositing rime fog";
 
-                case 51:
+                case 6:
                     return "Drizzle: Light";
 
-                case 53:
+                case 7:
                     return "Drizzle: Moderalte";
 
-                case 55:
+                case 8:
                     return "Drizzle: Dense Intensity";
 
-                case 56:
+                case 9:
                     return "Freezing Drizzle: Light";
 
-                case 57:
+                case 10:
                     return "Freezing Drizzle: Dense Intensity";
 
-                case 61:
+                case 11:
                     return "Rain: Slight";
 
-                case 63:
+                case 12:
                     return "Rain: Moderate";
 
-                case 65:
+                case 13:
                     return "Rain: Heavy Intensity";
 
-                case 66:
+                case 14:
                     return "Freezing Rain: Light";
 
-                case 67:
+                case 15:
                     return "Freezing Rain: Heavy intensity";
 
-                case 71:
+                case 16:
                     return "Snow fall: Slight";
 
                 case 73:
@@ -93,6 +94,8 @@ namespace MauiWeather.Converter
                     return "Thunderstorm: Slight or moderate";
 
                 case 96:
+                    return "Thunderstorm with slight and heavy hail";
+
                 case 99:
                     return "Thunderstorm with slight and heavy hail";
 

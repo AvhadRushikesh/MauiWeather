@@ -12,7 +12,9 @@ namespace MauiWeather.Converter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            var code = (float)value;
+            //var code = (float)value;
+            var code = value;
+
             var lottienImageSource = new SKFileLottieImageSource();
 
             switch (code)
@@ -20,112 +22,126 @@ namespace MauiWeather.Converter
                 case 0:
                     lottienImageSource.File = "sunny.json";
                     return lottienImageSource;
-                case 1:
+
+                case 2:
                     lottienImageSource.File = "sunny.json";
                     return lottienImageSource;
 
-                case 2:
-                    lottienImageSource.File = "foggy.json";
-                    return lottienImageSource;
-
                 case 3:
+                    lottienImageSource.File = "sunny.json";
+                    return lottienImageSource;
+
+                case 4:
+                    lottienImageSource.File = "sunny.json";
+                    return lottienImageSource;
+
+                case 5:
+                    lottienImageSource.File = "sunny.json";
+                    return lottienImageSource;
+
+                case 6:
                     lottienImageSource.File = "foggy.json";
                     return lottienImageSource;
 
-                case 45:
+                case 7:
                     lottienImageSource.File = "foggy.json";
                     return lottienImageSource;
 
-                case 48:
+                case 8:
                     lottienImageSource.File = "foggy.json";
                     return lottienImageSource;
 
-                case 51:
+                case 9:
+                    lottienImageSource.File = "foggy.json";
+                    return lottienImageSource;
+
+                case 10:
                     lottienImageSource.File = "partly-shower.json";
                     return lottienImageSource;
 
-                case 53:
+                case 11:
                     lottienImageSource.File = "partly-shower.json";
                     return lottienImageSource;
 
-                case 55:
+                case 12:
                     lottienImageSource.File = "partly-shower.json";
                     return lottienImageSource;
 
-                case 56:
+                case 13:
                     lottienImageSource.File = "partly-shower.json";
                     return lottienImageSource;
 
-                case 57:
+                case 14:
                     lottienImageSource.File = "partly-shower.json";
                     return lottienImageSource;
 
-                case 61:
+                case 15:
                     lottienImageSource.File = "stormshowersday.json";
                     return lottienImageSource;
 
-                case 63:
+                case 16:
                     lottienImageSource.File = "stormshowersday.json";
                     return lottienImageSource;
 
-                case 65:
+                case 17:
                     lottienImageSource.File = "stormshowersday.json";
                     return lottienImageSource;
 
-                case 66:
+                case 18:
+                    lottienImageSource.File = "stormshowersday.json";
+                    return lottienImageSource;
+
+                case 19:
+                    lottienImageSource.File = "stormshowersday.json";
+                    return lottienImageSource;
+
+                case 20:
+
                     lottienImageSource.File = "snow.json";
                     return lottienImageSource;
 
-                case 67:
+                case 21:
                     lottienImageSource.File = "snow.json";
                     return lottienImageSource;
 
-                case 71:
+                case 22:
                     lottienImageSource.File = "snow.json";
                     return lottienImageSource;
 
-                case 73:
+                case 23:
                     lottienImageSource.File = "snow.json";
                     return lottienImageSource;
 
-                case 75:
+                case 24:
                     lottienImageSource.File = "snow.json";
                     return lottienImageSource;
 
-                case 77:
-                    lottienImageSource.File = "snow.json";
-                    return lottienImageSource;
-
-                case 80:
+                case 25:
                     lottienImageSource.File = "storm.json";
                     return lottienImageSource;
 
-                case 81:
+                case 26:
                     lottienImageSource.File = "storm.json";
                     return lottienImageSource;
 
-                case 82:
+                case 27:
                     lottienImageSource.File = "storm.json";
                     return lottienImageSource;
 
-                case 85:
+                case 28:
                     lottienImageSource.File = "storm.json";
                     return lottienImageSource;
 
-                case 86:
+                case 29:
                     lottienImageSource.File = "storm.json";
                     return lottienImageSource;
 
-                case 95:
+                case 30:
                     lottienImageSource.File = "storm.json";
                     return lottienImageSource;
 
-                case 96:
-                case 99:
-                    lottienImageSource.File = "storm.json";
-                    return lottienImageSource;
-
-                default: return "Unknown";
+                default:
+                    return "Unknown";
             }
         }
 
